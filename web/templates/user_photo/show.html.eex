@@ -1,0 +1,28 @@
+<h2>Show user photo</h2>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @user_photo.title %>
+  </li>
+
+  <li>
+    <strong>File path:</strong>
+    <%= @user_photo.file_path %>
+  </li>
+
+  <li>
+    <strong>Object:</strong>
+    <%= @user_photo.object %>
+  </li>
+
+  <li>
+    <strong>User:</strong>
+    <%= @user_photo.user_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: user_photo_path(@conn, :edit, @user_photo) %>
+<%= link "Back", to: user_photo_path(@conn, :index) %>

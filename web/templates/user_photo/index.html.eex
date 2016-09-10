@@ -1,0 +1,32 @@
+<h2>Listing userphotos</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>File path</th>
+      <th>Object</th>
+      <th>User</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for user_photo <- @userphotos do %>
+    <tr>
+      <td><%= user_photo.title %></td>
+      <td><%= user_photo.file_path %></td>
+      <td><%= user_photo.object %></td>
+      <td><%= user_photo.user_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: user_photo_path(@conn, :show, user_photo), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: user_photo_path(@conn, :edit, user_photo), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: user_photo_path(@conn, :delete, user_photo), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New user photo", to: user_photo_path(@conn, :new) %>
