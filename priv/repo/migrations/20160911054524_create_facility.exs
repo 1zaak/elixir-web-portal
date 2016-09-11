@@ -11,12 +11,12 @@ defmodule MsqhPortal.Repo.Migrations.CreateFacility do
     create index(:facilities, [:membership_id])
 
     alter table(:users) do
-      add :membership, references(:memberships, on_delete: :nothing)
-      add :facility, references(:facilities, on_delete: :nothing)
+      add :membership_id, references(:memberships, on_delete: :nothing)
+      add :facility_id, references(:facilities, on_delete: :nothing)
 
     end
-    create index(:users, [:membership])
-    create index(:users, [:facility])
+    create index(:users, [:membership_id])
+    create index(:users, [:facility_id])
 
 
   end
