@@ -1,0 +1,18 @@
+<h2>Show user enquiry attachment</h2>
+
+<ul>
+
+  <li>
+    <strong>File path:</strong>
+    <%= @user_enquiry_attachment.file_path %>
+  </li>
+
+  <li>
+    <strong>User enquiry:</strong>
+    <%= @user_enquiry_attachment.user_enquiry_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: user_enquiry_attachment_path(@conn, :edit, @user_enquiry_attachment) %>
+<%= link "Back", to: user_enquiry_attachment_path(@conn, :index) %>

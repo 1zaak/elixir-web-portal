@@ -1,0 +1,28 @@
+<h2>Listing paymentattachments</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>File path</th>
+      <th>Payment</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for payment_attachment <- @paymentattachments do %>
+    <tr>
+      <td><%= payment_attachment.file_path %></td>
+      <td><%= payment_attachment.payment_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: payment_attachment_path(@conn, :show, payment_attachment), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: payment_attachment_path(@conn, :edit, payment_attachment), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: payment_attachment_path(@conn, :delete, payment_attachment), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New payment attachment", to: payment_attachment_path(@conn, :new) %>

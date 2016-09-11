@@ -1,0 +1,18 @@
+<h2>Show payment attachment</h2>
+
+<ul>
+
+  <li>
+    <strong>File path:</strong>
+    <%= @payment_attachment.file_path %>
+  </li>
+
+  <li>
+    <strong>Payment:</strong>
+    <%= @payment_attachment.payment_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: payment_attachment_path(@conn, :edit, @payment_attachment) %>
+<%= link "Back", to: payment_attachment_path(@conn, :index) %>

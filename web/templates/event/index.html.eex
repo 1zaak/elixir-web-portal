@@ -1,0 +1,32 @@
+<h2>Listing events</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Event title</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Calendar</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for event <- @events do %>
+    <tr>
+      <td><%= event.event_title %></td>
+      <td><%= event.start %></td>
+      <td><%= event.end %></td>
+      <td><%= event.calendar_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: event_path(@conn, :show, event), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: event_path(@conn, :edit, event), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: event_path(@conn, :delete, event), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New event", to: event_path(@conn, :new) %>

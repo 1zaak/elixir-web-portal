@@ -5,7 +5,7 @@ defmodule MsqhPortal.User do
     field :name, :string
     field :username, :string
     field :email, :string
-    field :password, :string
+    field :password, :string, virtual: true
     field :password_hash, :string
     field :state, :string
     belongs_to :membership, MsqhPortal.Membership

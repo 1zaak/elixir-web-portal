@@ -1,0 +1,28 @@
+<h2>Show event</h2>
+
+<ul>
+
+  <li>
+    <strong>Event title:</strong>
+    <%= @event.event_title %>
+  </li>
+
+  <li>
+    <strong>Start:</strong>
+    <%= @event.start %>
+  </li>
+
+  <li>
+    <strong>End:</strong>
+    <%= @event.end %>
+  </li>
+
+  <li>
+    <strong>Calendar:</strong>
+    <%= @event.calendar_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: event_path(@conn, :edit, @event) %>
+<%= link "Back", to: event_path(@conn, :index) %>

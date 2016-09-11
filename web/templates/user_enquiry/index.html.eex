@@ -1,0 +1,30 @@
+<h2>Listing userenquiries</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>User</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for user_enquiry <- @userenquiries do %>
+    <tr>
+      <td><%= user_enquiry.title %></td>
+      <td><%= user_enquiry.content %></td>
+      <td><%= user_enquiry.user_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: user_enquiry_path(@conn, :show, user_enquiry), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: user_enquiry_path(@conn, :edit, user_enquiry), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: user_enquiry_path(@conn, :delete, user_enquiry), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New user enquiry", to: user_enquiry_path(@conn, :new) %>

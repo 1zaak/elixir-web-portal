@@ -1,0 +1,23 @@
+<h2>Show payment</h2>
+
+<ul>
+
+  <li>
+    <strong>Amount:</strong>
+    <%= @payment.amount %>
+  </li>
+
+  <li>
+    <strong>For period:</strong>
+    <%= @payment.for_period %>
+  </li>
+
+  <li>
+    <strong>User:</strong>
+    <%= @payment.user_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: payment_path(@conn, :edit, @payment) %>
+<%= link "Back", to: payment_path(@conn, :index) %>

@@ -17,6 +17,18 @@ defmodule MsqhPortal.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+
+    resources "/users", UserController
+    resources "/userphotos", UserPhotoController
+    resources "/userenquiries", UserEnquiryController
+    resources "/userenquiryattachments", UserEnquiryAttachmentController
+    resources "/usercvs", UserCvController
+    resources "/payments", PaymentController
+    resources "/paymentattachments", PaymentAttachmentController
+    resources "/memberships", MembershipController
+    resources "/facilities", FacilityController
+    resources "/calendars", CalendarController
+    resources "/events", EventController
   end
 
   # Other scopes may use custom stacks.

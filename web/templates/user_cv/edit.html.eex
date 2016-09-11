@@ -1,0 +1,6 @@
+<h2>Edit user cv</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: user_cv_path(@conn, :update, @user_cv) %>
+
+<%= link "Back", to: user_cv_path(@conn, :index) %>

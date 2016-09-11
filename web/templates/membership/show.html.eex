@@ -1,0 +1,28 @@
+<h2>Show membership</h2>
+
+<ul>
+
+  <li>
+    <strong>Rate year:</strong>
+    <%= @membership.rate_year %>
+  </li>
+
+  <li>
+    <strong>Rate:</strong>
+    <%= @membership.rate %>
+  </li>
+
+  <li>
+    <strong>Period:</strong>
+    <%= @membership.period %>
+  </li>
+
+  <li>
+    <strong>Use period:</strong>
+    <%= @membership.use_period %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: membership_path(@conn, :edit, @membership) %>
+<%= link "Back", to: membership_path(@conn, :index) %>

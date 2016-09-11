@@ -1,0 +1,6 @@
+<h2>Edit user enquiry</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: user_enquiry_path(@conn, :update, @user_enquiry) %>
+
+<%= link "Back", to: user_enquiry_path(@conn, :index) %>

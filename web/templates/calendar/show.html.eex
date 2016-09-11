@@ -1,0 +1,18 @@
+<h2>Show calendar</h2>
+
+<ul>
+
+  <li>
+    <strong>Cal name:</strong>
+    <%= @calendar.cal_name %>
+  </li>
+
+  <li>
+    <strong>User:</strong>
+    <%= @calendar.user_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: calendar_path(@conn, :edit, @calendar) %>
+<%= link "Back", to: calendar_path(@conn, :index) %>

@@ -1,0 +1,32 @@
+<h2>Listing usercvs</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>File path</th>
+      <th>Object</th>
+      <th>User</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for user_cv <- @usercvs do %>
+    <tr>
+      <td><%= user_cv.title %></td>
+      <td><%= user_cv.file_path %></td>
+      <td><%= user_cv.object %></td>
+      <td><%= user_cv.user_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: user_cv_path(@conn, :show, user_cv), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: user_cv_path(@conn, :edit, user_cv), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: user_cv_path(@conn, :delete, user_cv), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New user cv", to: user_cv_path(@conn, :new) %>

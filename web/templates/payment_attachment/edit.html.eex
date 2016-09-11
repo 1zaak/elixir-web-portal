@@ -1,0 +1,6 @@
+<h2>Edit payment attachment</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: payment_attachment_path(@conn, :update, @payment_attachment) %>
+
+<%= link "Back", to: payment_attachment_path(@conn, :index) %>

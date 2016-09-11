@@ -1,0 +1,28 @@
+<h2>Show user cv</h2>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @user_cv.title %>
+  </li>
+
+  <li>
+    <strong>File path:</strong>
+    <%= @user_cv.file_path %>
+  </li>
+
+  <li>
+    <strong>Object:</strong>
+    <%= @user_cv.object %>
+  </li>
+
+  <li>
+    <strong>User:</strong>
+    <%= @user_cv.user_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: user_cv_path(@conn, :edit, @user_cv) %>
+<%= link "Back", to: user_cv_path(@conn, :index) %>

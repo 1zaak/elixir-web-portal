@@ -1,0 +1,6 @@
+<h2>Edit calendar</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: calendar_path(@conn, :update, @calendar) %>
+
+<%= link "Back", to: calendar_path(@conn, :index) %>
