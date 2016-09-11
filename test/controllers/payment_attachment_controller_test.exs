@@ -7,7 +7,7 @@ defmodule MsqhPortal.PaymentAttachmentControllerTest do
 
   test "lists all entries on index", %{conn: conn} do
     conn = get conn, payment_attachment_path(conn, :index)
-    assert html_response(conn, 200) =~ "Listing paymentattachments"
+    assert html_response(conn, 200) =~ "Listing payment_attachments"
   end
 
   test "renders form for new resources", %{conn: conn} do

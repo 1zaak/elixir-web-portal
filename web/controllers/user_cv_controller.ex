@@ -4,8 +4,8 @@ defmodule MsqhPortal.UserCvController do
   alias MsqhPortal.UserCv
 
   def index(conn, _params) do
-    usercvs = Repo.all(UserCv)
-    render(conn, "index.html", usercvs: usercvs)
+    user_cvs = Repo.all(UserCv)
+    render(conn, "index.html", user_cvs: user_cvs)
   end
 
   def new(conn, _params) do

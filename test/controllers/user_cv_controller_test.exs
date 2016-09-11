@@ -7,7 +7,7 @@ defmodule MsqhPortal.UserCvControllerTest do
 
   test "lists all entries on index", %{conn: conn} do
     conn = get conn, user_cv_path(conn, :index)
-    assert html_response(conn, 200) =~ "Listing usercvs"
+    assert html_response(conn, 200) =~ "Listing user_cvs"
   end
 
   test "renders form for new resources", %{conn: conn} do

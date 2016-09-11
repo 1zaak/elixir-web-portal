@@ -19,12 +19,12 @@ defmodule MsqhPortal.Router do
     get "/", PageController, :index
 
     resources "/users", UserController
-    resources "/userphotos", UserPhotoController
-    resources "/userenquiries", UserEnquiryController
-    resources "/userenquiryattachments", UserEnquiryAttachmentController
-    resources "/usercvs", UserCvController
+    resources "/user_photos", UserPhotoController
+    resources "/user_enquiries", UserEnquiryController
+    resources "/user_enquiry_attachments", UserEnquiryAttachmentController
+    resources "/user_cvs", UserCvController
     resources "/payments", PaymentController
-    resources "/paymentattachments", PaymentAttachmentController
+    resources "/payment_attachments", PaymentAttachmentController
     resources "/memberships", MembershipController
     resources "/facilities", FacilityController
     resources "/calendars", CalendarController

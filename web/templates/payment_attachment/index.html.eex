@@ -1,4 +1,4 @@
-<h2>Listing paymentattachments</h2>
+<h2>Listing payment_attachments</h2>
 
 <table class="table">
   <thead>
@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-<%= for payment_attachment <- @paymentattachments do %>
+<%= for payment_attachment <- @payment_attachments do %>
     <tr>
       <td><%= payment_attachment.file_path %></td>
       <td><%= payment_attachment.payment_id %></td>

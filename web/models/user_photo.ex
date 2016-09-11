@@ -1,7 +1,7 @@
 defmodule MsqhPortal.UserPhoto do
   use MsqhPortal.Web, :model
 
-  schema "userphotos" do
+  schema "user_photos" do
     field :title, :string
     field :file_path, :string
     field :object, :string

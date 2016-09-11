@@ -7,7 +7,7 @@ defmodule MsqhPortal.UserPhotoControllerTest do
 
   test "lists all entries on index", %{conn: conn} do
     conn = get conn, user_photo_path(conn, :index)
-    assert html_response(conn, 200) =~ "Listing userphotos"
+    assert html_response(conn, 200) =~ "Listing user_photos"
   end
 
   test "renders form for new resources", %{conn: conn} do

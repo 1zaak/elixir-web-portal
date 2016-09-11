@@ -1,4 +1,4 @@
-<h2>Listing usercvs</h2>
+<h2>Listing user_cvs</h2>
 
 <table class="table">
   <thead>
@@ -12,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-<%= for user_cv <- @usercvs do %>
+<%= for user_cv <- @user_cvs do %>
     <tr>
       <td><%= user_cv.title %></td>
       <td><%= user_cv.file_path %></td>

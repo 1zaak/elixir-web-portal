@@ -2,7 +2,7 @@ defmodule MsqhPortal.Repo.Migrations.CreateUserCv do
   use Ecto.Migration
 
   def change do
-    create table(:usercvs) do
+    create table(:user_cvs) do
       add :title, :string
       add :file_path, :string
       add :object, :string
@@ -10,7 +10,7 @@ defmodule MsqhPortal.Repo.Migrations.CreateUserCv do
 
       timestamps()
     end
-    create index(:usercvs, [:user_id])
+    create index(:user_cvs, [:user_id])
 
   end
 end

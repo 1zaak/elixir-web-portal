@@ -4,8 +4,8 @@ defmodule MsqhPortal.UserEnquiryAttachmentController do
   alias MsqhPortal.UserEnquiryAttachment
 
   def index(conn, _params) do
-    userenquiryattachments = Repo.all(UserEnquiryAttachment)
-    render(conn, "index.html", userenquiryattachments: userenquiryattachments)
+    user_enquiry_attachments = Repo.all(UserEnquiryAttachment)
+    render(conn, "index.html", user_enquiry_attachments: user_enquiry_attachments)
   end
 
   def new(conn, _params) do

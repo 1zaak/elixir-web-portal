@@ -1,7 +1,7 @@
 defmodule MsqhPortal.UserEnquiryAttachment do
   use MsqhPortal.Web, :model
 
-  schema "userenquiryattachments" do
+  schema "user_enquiry_attachments" do
     field :file_path, :string
     belongs_to :user_enquiry, MsqhPortal.UserEnquiry
 

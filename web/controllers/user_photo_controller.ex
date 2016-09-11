@@ -4,8 +4,8 @@ defmodule MsqhPortal.UserPhotoController do
   alias MsqhPortal.UserPhoto
 
   def index(conn, _params) do
-    userphotos = Repo.all(UserPhoto)
-    render(conn, "index.html", userphotos: userphotos)
+    user_photos = Repo.all(UserPhoto)
+    render(conn, "index.html", user_photos: user_photos)
   end
 
   def new(conn, _params) do

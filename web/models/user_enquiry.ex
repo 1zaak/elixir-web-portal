@@ -1,7 +1,7 @@
 defmodule MsqhPortal.UserEnquiry do
   use MsqhPortal.Web, :model
 
-  schema "userenquiries" do
+  schema "user_enquiries" do
     field :title, :string
     field :content, :string
     belongs_to :user, MsqhPortal.User

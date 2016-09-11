@@ -1,4 +1,4 @@
-<h2>Listing userenquiryattachments</h2>
+<h2>Listing user_enquiry_attachments</h2>
 
 <table class="table">
   <thead>
@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-<%= for user_enquiry_attachment <- @userenquiryattachments do %>
+<%= for user_enquiry_attachment <- @user_enquiry_attachments do %>
     <tr>
       <td><%= user_enquiry_attachment.file_path %></td>
       <td><%= user_enquiry_attachment.user_enquiry_id %></td>

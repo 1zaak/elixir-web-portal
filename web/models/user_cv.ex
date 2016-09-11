@@ -1,7 +1,7 @@
 defmodule MsqhPortal.UserCv do
   use MsqhPortal.Web, :model
 
-  schema "usercvs" do
+  schema "user_cvs" do
     field :title, :string
     field :file_path, :string
     field :object, :string

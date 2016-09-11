@@ -1,7 +1,7 @@
 defmodule MsqhPortal.PaymentAttachment do
   use MsqhPortal.Web, :model
 
-  schema "paymentattachments" do
+  schema "payment_attachments" do
     field :file_path, :string
     belongs_to :payment, MsqhPortal.Payment
 

@@ -4,8 +4,8 @@ defmodule MsqhPortal.UserEnquiryController do
   alias MsqhPortal.UserEnquiry
 
   def index(conn, _params) do
-    userenquiries = Repo.all(UserEnquiry)
-    render(conn, "index.html", userenquiries: userenquiries)
+    user_enquiries = Repo.all(UserEnquiry)
+    render(conn, "index.html", user_enquiries: user_enquiries)
   end
 
   def new(conn, _params) do

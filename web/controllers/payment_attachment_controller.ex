@@ -4,8 +4,8 @@ defmodule MsqhPortal.PaymentAttachmentController do
   alias MsqhPortal.PaymentAttachment
 
   def index(conn, _params) do
-    paymentattachments = Repo.all(PaymentAttachment)
-    render(conn, "index.html", paymentattachments: paymentattachments)
+    payment_attachments = Repo.all(PaymentAttachment)
+    render(conn, "index.html", payment_attachments: payment_attachments)
   end
 
   def new(conn, _params) do

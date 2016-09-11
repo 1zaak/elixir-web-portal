@@ -7,7 +7,7 @@ defmodule MsqhPortal.UserEnquiryAttachmentControllerTest do
 
   test "lists all entries on index", %{conn: conn} do
     conn = get conn, user_enquiry_attachment_path(conn, :index)
-    assert html_response(conn, 200) =~ "Listing userenquiryattachments"
+    assert html_response(conn, 200) =~ "Listing user_enquiry_attachments"
   end
 
   test "renders form for new resources", %{conn: conn} do

@@ -2,7 +2,7 @@ defmodule MsqhPortal.Repo.Migrations.CreateUserPhoto do
   use Ecto.Migration
 
   def change do
-    create table(:userphotos) do
+    create table(:user_photos) do
       add :title, :string
       add :file_path, :string
       add :object, :string
@@ -10,7 +10,7 @@ defmodule MsqhPortal.Repo.Migrations.CreateUserPhoto do
 
       timestamps()
     end
-    create index(:userphotos, [:user_id])
+    create index(:user_photos, [:user_id])
 
   end
 end
