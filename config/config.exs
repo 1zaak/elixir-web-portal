@@ -28,6 +28,7 @@ config :ex_admin,
   module: MsqhPortal,
   modules: [
     MsqhPortal.ExAdmin.Dashboard,
+    MsqhPortal.ExAdmin.User,
   ]
 
 # Import environment specific config. This must remain at the bottom
@@ -35,4 +36,3 @@ config :ex_admin,
 import_config "#{Mix.env}.exs"
 
 config :xain, :after_callback, {Phoenix.HTML, :raw}
-
