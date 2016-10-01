@@ -1,5 +1,6 @@
 defmodule MsqhPortal.Router do
   use MsqhPortal.Web, :router
+  use ExAdmin.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -29,6 +30,11 @@ defmodule MsqhPortal.Router do
     resources "/facilities", FacilityController
     resources "/calendars", CalendarController
     resources "/events", EventController
+  end
+
+  scope "/admin", ExAdmin do
+    pipe_through :browser
+    admin_routes
   end
 
   # Other scopes may use custom stacks.
